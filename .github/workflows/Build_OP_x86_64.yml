@@ -45,6 +45,7 @@ jobs:
         REPO_BRANCH: master
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
+        mkdir -p /home/runner/work/amlogic-s9xxx-armbian/amlogic-s9xxx-armbian/build/cache
         cd openwrt
         echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
         
